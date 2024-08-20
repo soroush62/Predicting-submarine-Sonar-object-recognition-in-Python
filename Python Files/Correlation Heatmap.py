@@ -2,14 +2,12 @@ import pandas as pd
 import numpy as np
 import lightningchart as lc
 
-with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', 'r') as f:
-    mylicensekey = f.read().strip()
-lc.set_license(mylicensekey)
+lc.set_license('my-license-key')
 
-file_path = 'D:/wenprograming23/src/team6/Predicting-submarine-Sonar-object-recognition-in-Python/Dataset/sonar.csv'
-sonar_data = pd.read_csv(file_path, header=None)
+file_path = 'sonar.csv'
+data = pd.read_csv(file_path, header=None)
 
-sonar_features = sonar_data.drop(columns=[60])
+sonar_features = data.drop(columns=[60])
 
 corr_matrix = sonar_features.corr()
 
@@ -47,3 +45,5 @@ y_axis.set_title('Feature Index')
 y_axis.set_interval(0, sonar_features.shape[1])
 
 chart.open()
+
+

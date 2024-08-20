@@ -10,15 +10,13 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 import lightningchart as lc
 
-with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', 'r') as f:
-    mylicensekey = f.read().strip()
-lc.set_license(mylicensekey)
+lc.set_license('my-license-key')
 
-file_path = 'D:/wenprograming23/src/team6/Predicting-submarine-Sonar-object-recognition-in-Python/Dataset/sonar.csv'
-sonar_data = pd.read_csv(file_path, header=None)
+file_path = 'sonar.csv'
+data = pd.read_csv(file_path, header=None)
 
-X = sonar_data.drop(columns=[60])
-y = sonar_data[60].apply(lambda x: 1 if x == 'M' else 0)  # Convert target to binary values
+X = data.drop(columns=[60])
+y = data[60].apply(lambda x: 1 if x == 'M' else 0)  # Convert target to binary values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
