@@ -149,7 +149,7 @@ series.set_palette_colors([
 ])
 chart.open()
 ```
-![](Images/Correlation Heatmap of Sonar Features.png)
+![](Images/Correlation-Heatmap-of-Sonar-Features.png)
 
 - **Density and Scatter Plots of Sonar Features:**
   - The density and scatter plots illustrate the distribution and relationships between pairs of sonar features, specifically for identifying mines (orange) versus rocks (blue). These visualizations are crucial for understanding how well features separate the two classes and for assessing the data's variability.
@@ -178,7 +178,7 @@ for i, col in enumerate(X.columns[:4]):
 dashboard.open()
 
 ```
-![](Images/Density and Scatter Plots of Sonar Features.png)
+![](Images/Density-and-Scatter-Plots-of-Sonar-Features.png)
 
 - **Spider Chart for Mean Feature Values:**
   - The spider chart compares the mean feature values for rocks and mines across all features. The overlapping areas indicate features that may not contribute much to distinguishing between the two classes, while areas with clear separation may indicate useful features for classification.
@@ -208,7 +208,7 @@ series_mines.add_points([{'axis': str(i), 'value': mean_mines[i]} for i in range
 chart.open()
 
 ```
-![](Spider Chart for Mean Feature Values.png)
+![](Spider-Chart-for-Mean-Feature-Values.png)
 
 - **ROC Curves for Different Models:**
   - ROC (Receiver Operating Characteristic) curves for different models visualize the trade-off between true positive rates and false positive rates across various thresholds. Higher AUC (Area Under the Curve) values indicate better performance. These charts help compare the effectiveness of models in distinguishing between rocks and mines.
@@ -238,7 +238,7 @@ series = chart.add_line_series().add(fpr.tolist(), tpr.tolist()).set_name('ROC C
 chart.open()
 
 ```
-![](Images/ROC Curves for Different Models.png)
+![](Images/ROC-Curves-for-Different-Models.png)
 
 - **Feature Importance Bar Charts:**
   - These bar charts rank the importance of features based on how much they contribute to the model's predictions. Understanding feature importance helps in refining models by focusing on the most informative features, which can lead to better performance and reduced overfitting.
@@ -263,7 +263,7 @@ chart = lc.BarChart(title='Random Forest Feature Importances')
 chart.set_data([{'category': str(i), 'value': imp} for i, imp in enumerate(importances)])
 chart.open()
 ```
-![](Images/Feature Importance Bar Charts.png)
+![](Images/Feature-Importance-Bar-Charts.png)
 
 - **Model Accuracy Over Iterations:**
   - These charts track the accuracy of different models on training and testing sets over multiple iterations. This visualization helps in assessing the model's learning progress and identifying potential overfitting if the training accuracy significantly outpaces the testing accuracy.
@@ -291,7 +291,7 @@ chart.add_line_series().add([1, 2, 3, 4, 5], [train_accuracy] * 5).set_name('Tra
 chart.add_line_series().add([1, 2, 3, 4, 5], [test_accuracy] * 5).set_name('Testing Accuracy')
 chart.open()
 ```
-![](Images/Model Accuracy Over Iterations.png)
+![](Images/Model-Accuracy-Over-Iterations.png)
 
 - **Precision-Recall Curves:**
   - Precision-Recall curves are particularly useful when dealing with imbalanced datasets. They show the trade-off between precision and recall for different threshold values. High AUC values in these curves indicate that the model maintains a good balance between precision and recall, which is crucial for tasks like mine detection.
@@ -321,7 +321,7 @@ chart.add_line_series().add(recall.tolist(), precision.tolist()).set_name('Preci
 chart.open()
 
 ```
-![](Images/Precision-Recall Curves.png)
+![](Images/Precision-Recall-Curves.png)
 
 - **Real-Time Sonar Data Predictions:**
   - The line chart shows the real-time sonar raw data values over time, which are sent into the machine learning model for classification. The bar chart shows the cumulative number of predictions made by the model for "Rock" and "Mine."
@@ -346,7 +346,7 @@ bar_chart.set_data([{'category': 'Rock', 'value': 0}, {'category': 'Mine', 'valu
 dashboard.open(live
 
 ```
-![](Images/Real-Time Sonar Data Predictions.gif)
+![](Images/Real-Time-Sonar-Data-Predictions.gif)
 
 ## Conclusion
 
