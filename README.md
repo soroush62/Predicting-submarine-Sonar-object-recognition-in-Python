@@ -208,7 +208,7 @@ series_mines.add_points([{'axis': str(i), 'value': mean_mines[i]} for i in range
 chart.open()
 
 ```
-![](Spider-Chart-for-Mean-Feature-Values.png)
+![](Images/Spider-Chart-for-Mean-Feature-Values.png)
 
 - **ROC Curves for Different Models:**
   - ROC (Receiver Operating Characteristic) curves for different models visualize the trade-off between true positive rates and false positive rates across various thresholds. Higher AUC (Area Under the Curve) values indicate better performance. These charts help compare the effectiveness of models in distinguishing between rocks and mines.
