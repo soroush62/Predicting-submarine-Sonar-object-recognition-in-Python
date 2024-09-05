@@ -361,8 +361,6 @@ In this project, we have demonstrated the process of predicting submarine sonar 
 - **Ease of Integration with Machine Learning Workflows:** LightningChart can be seamlessly integrated with Python's machine learning libraries, such as scikit-learn. This allows for a smooth workflow where data preprocessing, model training, and visualization are all connected, leading to more efficient and effective analysis.
 - **Professional Quality Visuals:** LightningChart’s high-quality rendering ensures that the visualizations are not only informative but also aesthetically pleasing. This is valuable when presenting findings to stakeholders or when documentation requires clear and professional-looking charts.
 
-Certainly! Continuing from where we left off:
-
 ---
 
 ## References
